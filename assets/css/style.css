@@ -98,6 +98,13 @@ border:1px solid #e2e2e2;
     background-color: #ffffff;
     font-family: 'Lato', sans-serif;
 }
+.open
+{
+    display:none;
+}
+.open:hover{
+    display:block;
+}
 .controls {
     margin-top: 10px;
     border: 1px solid transparent;
