@@ -385,6 +385,10 @@ if($via!="")
   
    }
   }
+  
+  
+   // echo($np);
+   // ec//ho($nl);
     
 if(($np<5)&&($nl<5))
 {
@@ -406,30 +410,53 @@ else
  
     }
 }
+  
+  
+  
+  //echo($cost);
+  //Use round()
+
+
+    
+   // echo(number_format($ditance*6.21371, 0));
+  
+  
+ /** while ($row= mysqli_fetch_array($result,MYSQLI_ASSOC))
+ {
+ 
+                        $agency = $row["agency"];
+			$type= $row["type"];
+                        // $team["price"] = $row["price"];
+		echo($agency);
+		echo($type);
+    
+ }**/
  
  if($distance>0)
  {
  
 ?> 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Crawley Taxis </title>
-    <meta charset="utf-8">
-    <link rel="icon" sizes="57x57" href="./assets/images/icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-<link rel="stylesheet" href="./assets/css/media.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <title>Gatwick Airport Taxis </title>
+   <link rel="icon" href="./images/icon.png" type="image/gif" sizes="16x16">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Muli|Niramit|Open+Sans|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
-</head>
+</head>  
 <body>
-    <section class="quote">
+
+<section class="quote">
 <div class="row">
  
 <div class="col-md-8 nopadding heighto">
@@ -670,7 +697,7 @@ else
                                              
                                              <input type="hidden" value="<?php echo ($cost); ?>" name="fare">
                                                           
-                      <center><button class="buttonquote rigid">Book Now</button></center>
+                      <center><button class="btn btn-success rigid">Book Now</button> <button class="btn btn-primary rigid">Email Quote</button></center>
                           </form>
             
             </div><br><br>
@@ -904,7 +931,6 @@ else
 </div>
 </div>
 </section>
-</body>
    <?php
 	
 	if($via!="")
@@ -1005,37 +1031,10 @@ else
   </script>
 
 <?php } ?>
-       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&libraries=places&callback=initAutocomplete"
-          async defer></script>  
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
-          <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
-  <script>
-        $(document).ready(function() {
-              $.datetimepicker.setLocale('pt-EN');
-             $('#datetimepicker').datetimepicker(
-       {
-          // var u="60:00";
-   datepicker:true,
-   allowTimes:[
-   '00:00','00:15', '00:30', '00:45','01:00','01:15','01:30','01:45','02:00','02:15','02:30','02:45','03:00','03:15','03:30','03:45','04:00','04:15','04:30','04:45','05:00','05:15','05:30','05:45','06:00','06:15','06:30','06:45','07:00','07:15','07:30','07:45','08:00','08:15','08:30','08:45','09:00','09:15','09:30','09:45','10:00','10:15','10:30','10:45','11:00','11:15','11:30','11:45','12:00','12:15','12:30','12:45','13:00','13:15','13:30','13:45','14:00','14:15','14:30','14:45','15:00','15:15','15:30','15:45','16:00','16:15','16:30','16:45','17:00','17:15','17:30','17:45','18:00','18:15','18:30','18:45','19:00','19:15','19:30','19:45','20:00','20:15','20:30','20:45','21:00','21:15','21:30','21:45','22:00','22:15','22:30','22:45','23:00','23:15','23:30','23:45'
-   ]
-  });
-              
-        });
-  </script>
-<style>
-select
-{
-font-family: 'FontAwesome', sans-serif !important;
-
-}
-</style>
-</html>
-
-
+    
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV_e29ZNv8f0S3-2IzNwIPqc-ycslxNBE&callback=initMap"></script>
+</body></html>
+   
  <?php }
         
         else
@@ -1061,3 +1060,7 @@ font-family: 'FontAwesome', sans-serif !important;
 }
 
 }?>
+
+
+
+
